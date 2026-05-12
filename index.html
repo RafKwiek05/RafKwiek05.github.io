@@ -11,15 +11,20 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">
-            <span class="status-dot"></span>
-            <span class="logo-text">SYSTEM_READY</span>
-        </div>
-        <button id="theme-toggle" class="theme-btn">
-            <i data-lucide="sun" class="sun-icon"></i>
-            <i data-lucide="moon" class="moon-icon"></i>
-        </button>
-    </nav>
+    <div class="logo">
+        <span class="status-dot"></span>
+        <span class="logo-text">SYSTEM_READY</span>
+    </div>
+    <!-- Animowany Switch -->
+    <div class="theme-switch-wrapper">
+        <input type="checkbox" id="theme-checkbox" class="theme-checkbox">
+        <label for="theme-checkbox" class="theme-label">
+            <i data-lucide="moon" class="icon-moon"></i>
+            <i data-lucide="sun" class="icon-sun"></i>
+            <div class="switch-ball"></div>
+        </label>
+    </div>
+</nav>
 
     <main class="container">
         <!-- BENTO GRID -->
@@ -70,22 +75,54 @@
 
         <!-- TIMELINE SECTION -->
         <section class="section-extra">
-            <h2 class="section-title"><i data-lucide="briefcase"></i> Oś czasu</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">2024 - Obecnie</span>
-                    <h4>Własne Projekty & Nauka</h4>
-                    <p>Skupienie na optymalizacji kodu pod mikrokontrolery i nowoczesny frontend.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">2023</span>
-                    <h4>Pierwsze kroki w elektronice</h4>
-                    <p>Budowa prostych układów i programowanie w C.</p>
-                </div>
-            </div>
-        </section>
+    <h2 class="section-title"><i data-lucide="briefcase"></i> Ścieżka & Doświadczenie</h2>
+    <div class="timeline">
+        <div class="timeline-item main-path">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">Październik 2026</span>
+            <h4>Rozpoczęcie studiów informatycznych</h4>
+            <p>Kontynuacja pasji i sformalizowanie wiedzy inżynierskiej.</p>
+        </div>
+
+        <div class="timeline-item work-intl">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">2025</span>
+            <h4>Niemcy | Prace wykończeniowe (5 msc)</h4>
+            <p>Samodzielność i precyzja w wymagających warunkach.</p>
+        </div>
+
+        <div class="timeline-item work-intl">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">2024</span>
+            <h4>Austria | Prace wykończeniowe (2 msc)</h4>
+        </div>
+
+        <div class="timeline-item work-intl">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">2023</span>
+            <h4>Holandia | Sadzenie truskawek (2 msc)</h4>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">2022</span>
+            <h4>Brukarka i wykończenia (2 msc)</h4>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">2021</span>
+            <h4>Budowa (1 msc)</h4>
+        </div>
+
+        <div class="timeline-item main-path">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">2020</span>
+            <h4>Technikum Informatyczne ZSME w Tarnowie</h4>
+            <p>Początek drogi z kodem i elektroniką. W międzyczasie: zbiór borówek (1 msc).</p>
+        </div>
+    </div>
+</section>
 
         <!-- REFERENCJE -->
         <section class="section-extra">
