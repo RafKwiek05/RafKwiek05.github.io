@@ -113,6 +113,62 @@ body {
     .card-main, .card-stack, .card-usp { grid-column: span 1; }
 }
 
+.card-terminal {
+    grid-column: span 2;
+    background: #000 !important;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    padding: 0; /* Terminal musi wypełniać kartę */
+    border: 1px solid var(--accent);
+}
+
+.terminal-header {
+    background: #1a1a1a;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid #333;
+}
+
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+.terminal-title { color: #888; font-size: 12px; margin-left: 10px; }
+
+.terminal-body {
+    padding: 15px;
+    font-size: 13px;
+    color: var(--accent);
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: 120px;
+}
+
+.terminal-input-line {
+    padding: 0 15px 15px 15px;
+    display: flex;
+    gap: 8px;
+    color: var(--accent);
+}
+
+.prompt { color: var(--accent); font-weight: bold; }
+
+#terminal-input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    width: 100%;
+}
+
+/* Styl scrollbaru dla terminala */
+.terminal-body::-webkit-scrollbar { width: 4px; }
+.terminal-body::-webkit-scrollbar-thumb { background: var(--accent); }
 /* Animowany Switch Theme */
 .theme-switch-wrapper {
     display: flex;
