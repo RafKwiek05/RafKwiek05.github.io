@@ -1,25 +1,19 @@
-// Inicjalizacja ikon Lucide
 lucide.createIcons();
 
-// Przełącznik motywu
-const themeToggle = document.getElementById('theme-toggle');
+const checkbox = document.getElementById('theme-checkbox');
 const html = document.documentElement;
 
-themeToggle.addEventListener('click', () => {
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    html.setAttribute('data-theme', newTheme);
-    
-    // Zapisz wybór w przeglądarce
-    localStorage.setItem('theme', newTheme);
+// Obsługa zmiany
+checkbox.addEventListener('change', () => {
+    const targetTheme = checkbox.checked ? 'light' : 'dark';
+    html.setAttribute('data-theme', targetTheme);
+    localStorage.setItem('theme', targetTheme);
 });
 
-// Wczytaj zapisany motyw
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    html.setAttribute('data-theme', savedTheme);
-}
+// Wczytywanie stanu przy starcie
+const savedTheme = localStorage.getItem('theme') || 'dark';
+html.setAttribute('data-theme', savedTheme);
+checkbox.checked = (savedTheme === 'light');
 
 // Prosta animacja pojawiania się (Scroll Reveal)
 const cards = document.querySelectorAll('.card');
