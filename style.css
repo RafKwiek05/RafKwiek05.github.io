@@ -106,13 +106,74 @@ body {
 }
 .timeline-date { color: var(--accent); font-family: monospace; font-size: 0.9rem; }
 
-.theme-btn { 
-    background: none; border: 1px solid var(--border); color: var(--text); 
-    padding: 10px; border-radius: 50%; cursor: pointer; 
-}
 
 /* Responsive */
 @media (max-width: 768px) {
     .bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
     .card-main, .card-stack, .card-usp { grid-column: span 1; }
+}
+
+/* Animowany Switch Theme */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-checkbox { display: none; }
+
+.theme-label {
+    width: 60px;
+    height: 30px;
+    background-color: #222;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    border: 1px solid var(--border);
+}
+
+.theme-label .switch-ball {
+    width: 22px;
+    height: 22px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 10px var(--accent);
+}
+
+/* Przesunięcie kulki przy zaznaczeniu */
+.theme-checkbox:checked + .theme-label .switch-ball {
+    transform: translateX(30px);
+}
+
+.icon-moon { color: #888; width: 16px; }
+.icon-sun { color: #888; width: 16px; }
+
+/* Poprawka Osi Czasu */
+.timeline-item {
+    padding-bottom: 1.5rem;
+    border-left: 2px solid var(--border);
+    padding-left: 25px;
+    position: relative;
+}
+
+.main-path h4 { color: var(--accent); } /* Wyróżnienie edukacji */
+
+.work-intl { opacity: 0.8; } /* Subtelne przygaszenie prac dorywczych */
+
+.timeline-dot {
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--bg);
+    border: 2px solid var(--accent);
+    border-radius: 50%;
 }
